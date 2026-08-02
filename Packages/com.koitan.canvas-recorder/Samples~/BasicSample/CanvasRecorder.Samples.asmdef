@@ -1,0 +1,16 @@
+{
+    "name": "CanvasRecorder.Samples",
+    "rootNamespace": "CanvasRecorder.Samples",
+    "references": [
+        "CanvasRecorder"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

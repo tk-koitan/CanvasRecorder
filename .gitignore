@@ -104,3 +104,8 @@ InitTestScene*.unity*
 
 # Auto-generated cache in Assets folder
 /[Aa]ssets/[Ss]ceneDependencyCache*
+
+# Package Manager がインポートしたサンプルの複製。
+# 正となるのは Packages/com.koitan.canvas-recorder/Samples~/ 側なので追跡しない。
+/[Aa]ssets/[Ss]amples/
+/[Aa]ssets/[Ss]amples.meta

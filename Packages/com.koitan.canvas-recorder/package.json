@@ -1,0 +1,27 @@
+{
+  "name": "com.koitan.canvas-recorder",
+  "version": "0.1.0",
+  "displayName": "Canvas Recorder",
+  "description": "ランタイムにゲーム画面を録画し、プレビューして保存できるようにするパッケージです。Web(WebGL) ではブラウザの MediaRecorder、Windows スタンドアロンでは Media Foundation を使います。エディタでは Unity Recorder かダミー映像で動作を確認できます。",
+  "unity": "6000.0",
+  "keywords": [
+    "recording",
+    "capture",
+    "video",
+    "webgl",
+    "screenshot"
+  ],
+  "author": {
+    "name": "koitan"
+  },
+  "dependencies": {
+    "com.unity.modules.video": "1.0.0"
+  },
+  "samples": [
+    {
+      "displayName": "Basic Sample",
+      "description": "録画の開始と停止、プレビュー、保存、共有までの一連の流れを IMGUI で実装したサンプルです。結線済みのシーンが含まれます。",
+      "path": "Samples~/BasicSample"
+    }
+  ]
+}
