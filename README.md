@@ -85,6 +85,30 @@ private void OnReady(long sizeBytes) => Debug.Log($"{sizeBytes / 1024f:F1} KB");
 Package Manager の画面から **Basic Sample** をインポートしてください。
 録画の開始と停止、プレビュー、保存、共有までを IMGUI で実装した、結線済みのシーンが入っています。
 
+## Claude Code を使う場合
+
+UPM で導入したパッケージは `Library/PackageCache/` に展開されます。Unity 公式の .gitignore は
+`Library/` を除外するため、**Claude Code はこのパッケージのソースを発見できません。**
+その状態では API を推測して、存在しないメソッドを書いてしまいます。
+
+これを防ぐため、本パッケージは Claude Code 用のスキルを
+`.claude/skills/canvas-recorder/` に配置します。スキルにはソースの在処と読み方だけを書いてあり、
+API の詳細は含みません（パッケージ更新時に古い情報が残らないようにするため）。
+
+初回にエディタ上で同意を求めるダイアログが出ます。同意すると配置され、
+以降はパッケージのバージョンが変わったときだけ更新されます。
+`Assets/` の外に書き込むため、無断では配置しません。
+
+メニューからも操作できます。
+
+| メニュー | 動作 |
+|---|---|
+| `Tools/CanvasRecorder/Setup Claude Code Skill` | 手動で配置・再配置する |
+| `Tools/CanvasRecorder/Remove Claude Code Skill` | 配置したものを削除し、同意を取り消す |
+
+利用者の `.gitignore`、`.claude/settings.json`、`CLAUDE.md` は書き換えません。
+`.claude/skills/` 内の他のスキルにも触れません。
+
 ## 主な制約
 
 - 録画対象は Unity の描画のみです。キャンバス外の HTML 要素やブラウザ UI は含まれません

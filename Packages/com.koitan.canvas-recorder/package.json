@@ -1,6 +1,6 @@
 {
   "name": "com.koitan.canvas-recorder",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "displayName": "Canvas Recorder",
   "description": "ランタイムにゲーム画面を録画し、プレビューして保存できるようにするパッケージです。Web(WebGL) ではブラウザの MediaRecorder、Windows スタンドアロンでは Media Foundation を使います。エディタでは Unity Recorder かダミー映像で動作を確認できます。",
   "unity": "6000.0",
